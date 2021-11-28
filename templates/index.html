@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Welcome Display</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <div id="background" style="background-image: url({{ url_for('static', filename=background) }})">
+    <div id="overlay" style="background-image: url({{ url_for('static', filename='overlay.png') }})">
+    <script type="text/javascript">document.body.style.cursor = 'none';</script>
+    <meta http-equiv="refresh" content="300" />
+  </head>
+
+  <body onload="updateClock(); setInterval('updateClock()', 1000 )">
+  <h1>{{ date }}</h1>
+  <p><span id="rss">{{ rss }}</span></p>
+
+
+<!-- Clock Script -->
+  <script type="text/javascript" src="{{ url_for('static', filename='clock.js') }}"></script>
+  <p style="font-size:85px"><span id="clock">&nbsp;</span></p>
+  <!-- Countdown -->
+  <p style="font-size:35px"><span id="countdown">{{ countdown }}</span></p>
+
+  <!-- Google Calendar -->
+  <h2><span id="calendar">{{ cal_header }}</span></h2>
+  <p style="font-size:22px"><span id="cal_one">{{ cal_one }}</span></p>
+  <p style="font-size:22px"><span id="cal_two">{{ cal_two }}</span></p>
+  <p style="font-size:22px"><span id="cal_three">{{ cal_three }}</span></p>
+
+  <!-- Weather -->
+  <img id="weatherpic" src="{{ url_for('static', filename=weather_pic) }}">
+  <p style="font-size:55px"><span id="temp">{{ temperature }}</span></p>
+  <p style="font-size:22px"><span id="highlow">{{ highlow }}</span></p>
+  <p align="center" style="font-size:22px;"><span id="description">{{ description }}</span></p>
+
+  <!-- VPN -->
+  <p style="font-size:22px"><span id="ads">{{ ads }}</span></p>
+
+
+  </body>
+
+</html>

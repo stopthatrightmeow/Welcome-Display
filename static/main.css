@@ -1,0 +1,118 @@
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow: hidden; /* Hide scrollbars */
+  color: white;
+  background-color: black;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto';
+  font-size: 55px;
+}
+h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+}
+p {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto';
+  font-size: 20px;
+}
+#clock {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  font-family: 'Roboto'
+  font-size: 95px;
+}
+#overlay {
+  padding: 0px;
+  margin: 0px;
+  position: absolute;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+}
+#background {
+  padding: 0px;
+  margin: 0px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+selector {
+  cursor: none;
+}
+#countdown {
+  position: absolute;
+  bottom: 0px;
+}
+#weatherpic {
+  position: absolute;
+  top: 785px;
+  right: 60px;
+}
+#temp {
+  position: absolute;
+  top: 865px;
+  right: 45px;
+  font-family: 'Roboto'
+}
+#highlow {
+  position: absolute;
+  top: 925px;
+  right: 45px;
+  font-family: 'Roboto'
+}
+#description {
+  position: absolute;
+  top: 955px;
+  right: 45px;
+  font-family: 'Roboto'
+}
+#rss {
+  position: absolute;
+  top: 70px;
+  left: 25px;
+  font-family: 'Roboto'
+}
+#calendar {
+  position: absolute;
+  top: 100px;
+  left: 25px;
+  font-family: 'Roboto'
+}
+#cal_one {
+  position: absolute;
+  top: 160px;
+  left: 50px;
+  font-family: 'Roboto'
+}
+#cal_two {
+  position: absolute;
+  top: 190px;
+  left: 50px;
+  font-family: 'Roboto'
+}
+#cal_three {
+  position: absolute;
+  top: 220px;
+  left: 50px;
+  font-family: 'Roboto'
+}
+#ads {
+  position: absolute;
+  bottom: 40px;
+  left: 0px;
+  font-family: 'Roboto'
+}
+#background{
+  background-size: cover;
+}

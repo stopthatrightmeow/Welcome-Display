@@ -1,0 +1,7 @@
+venv/*
+token.json
+credentials.json
+static/fonts/*
+
+
+ 
