@@ -31,38 +31,26 @@ def index():
     # Background
     if other_date.strftime('%m') == '10': # Halloween
         image = os.listdir("static/Backgrounds/halloween/")
-        if '.DS_Store' in image:
-            image.remove('.DS_Store')
-        selected_image = random.choice(image)
         file_path = 'Backgrounds/halloween/'
     elif other_date.strftime('%m') == '12': # Christmas
         image = os.listdir("static/Backgrounds/christmas/")
-        if '.DS_Store' in image:
-            image.remove('.DS_Store')
-        selected_image = random.choice(image)
         file_path = 'Backgrounds/christmas/'
-    elif other_date.strftime('%m, %d') == '01, 01': # Birthday
+    elif other_date.strftime('%m, %d') == '04, 06': # Ash Birthday
         image = os.listdir("static/Backgrounds/birthday/")
-        if '.DS_Store' in image:
-            image.remove('.DS_Store')
-        selected_image = random.choice(image)
         file_path = 'Backgrounds/birthday/'
     elif other_date.strftime('%m, %d') == '07, 04': # Independence Day
         image = os.listdir("static/Backgrounds/america/")
-        if '.DS_Store' in image:
-            image.remove('.DS_Store')
-        selected_image = random.choice(image)
         file_path = 'Backgrounds/america/'
     else:
         image = os.listdir("static/Backgrounds/normal/")
-        if '.DS_Store' in image:
-            image.remove('.DS_Store')
-        selected_image = random.choice(image)
         file_path='Backgrounds/normal/'
-    
-    background = file_path + selected_image
-    print(background)
 
+    # Remove .DS_Store from directory listing
+    if '.DS_Store' in image:
+            image.remove('.DS_Store')
+    # Select a random image
+    selected_image = random.choice(image)
+    background = file_path + selected_image
 
     # Countdown
     msg_list = ['Day 3,532 of Quarentine: "I can\'t be with people, and I can\'t be alone."', 'Hey I love your face',
