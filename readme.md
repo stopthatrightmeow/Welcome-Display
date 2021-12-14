@@ -72,6 +72,31 @@ OR if you wanted to use port 80:
 
  - `authbind --deep python3 main.py`
 
+#### Discord bot
+
+**RUN THIS AT YOUR OWN RISK**
+
+Some background, I have never programmed a Discord bot before, this is my first attempt at one, and it seems to be pretty steady so I just threw it up for fun. The code works great for the occassional wallpaper found on your various subreddits/wallpaper websites. Eventually I'll probably add in a bulk add, and maybe get rid of the requirement for the end to be a `.jpg`, `.png`, or a `.jpg` but wanted to also code it for safety so your not downloading malicious stuff. Hence the mime type checks. The log keeps a running list of all the requests users have submitted as well including all the links and time stamps so if you need to go back and look you can trace it back. 
+
+ If you want the discord bot, you'll need to follow these instructions to [setup a private bot](https://discordjs.guide/preparations/setting-up-a-bot-application.html#your-token). Then at the _very_ bottom of the `discord_image_bot.py` script you'll see `client.run('<YOUR CLIENT SECRET HERE>')`. Input your client secret there, and then run the following command to run the python bot. **DO NOT SHARE THAT CLIENT SECRET WITH ANYONE, THIS IS LIKE A PASSWORD, KEEP IT SAFE.**
+ 
+ - `nohup python3 discord_image_bot.py &` 
+
+ You can then check if the bot is up and running by sending a message in the appropriate channel: `$help`
+
+ ```
+Help menu for Pickles the Wallpaper Mage:
+There are five folders you can save to: america, birthday, christmas, halloween and normal.
+Currently there are only two supported file types: .jpg, .jpeg, or .png.
+Select a folder to download to by running $d<beginning letter of folder name> <imageurl>.
+For example if you wanted to download an image to the normal folder you would run the following comand:
+
+$dn <url to image>
+```
+
+I have hard coded the name "Pickles the Wallpaper Mage", however feel free to change it on line 40! When you setup your bot, you'll be able to adjust the name there and set your own customized picture to fit your theme for your particular Discord.
+
+
 ### Making things pretty
 1. Just pop open my perfered Web Browser and browse to either `localhost:8080` or `localhost` depending on which port you choose.
 2. Set this as your home page
@@ -88,7 +113,9 @@ Question: I'm getting this super sketchy Google Prompt for me to login, is this 
 Question: Can I change how often the page refreshes? It Seems too [Slow / Fast].
   - Answer: Yes you can! See line 10 under `./static/templates/index.html` and adjust the following to match your needs. (300 seconds = 5 mins)
 
-`<meta http-equiv="refresh" content="300" />`
+```
+<meta http-equiv="refresh" content="300" />
+```
 
 ## Image Authors/Credit
 If you like the added backgrounds, please consider supporting these amazing creators!!
