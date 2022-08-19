@@ -55,7 +55,7 @@ async def on_message(message):
                 await message.channel.send(f'Unsupported URL type. Ensure the URL ends with `.jpg`, `.jpeg`, or `.png`.')
 
         # Normal Photos
-        elif message.content.startswith('$dn') and (message.content.endswith('.jpg') or message.content.endswith('.jpeg') or message.content.endswith('.png')):
+        elif message.content.startswith('$dn'):
             image_url = message.content.split(' ')[1]
             filename = image_url.split('/')[-1]
             file_path = './static/Backgrounds/normal/'
@@ -86,7 +86,7 @@ async def on_message(message):
                     logger.info(f'Saved {filename}')
 
         # Christmas Photos
-        elif message.content.startswith('$dc') and (message.content.endswith('.jpg') or message.content.endswith('.jpeg') or message.content.endswith('.png')):
+        elif message.content.startswith('$dc'):
             image_url = message.content.split(' ')[1]
             filename = image_url.split('/')[-1]
             file_path = './static/Backgrounds/christmas/'
@@ -117,7 +117,7 @@ async def on_message(message):
                     logger.info(f'Saved {filename}')
 
         # America Photos
-        elif message.content.startswith('$da') and (message.content.endswith('.jpg') or message.content.endswith('.jpeg') or message.content.endswith('.png')):
+        elif message.content.startswith('$da'):
             image_url = message.content.split(' ')[1]
             filename = image_url.split('/')[-1]
             file_path = './static/Backgrounds/america/'
@@ -148,7 +148,7 @@ async def on_message(message):
                     logger.info(f'Saved {filename}')
 
         # Halloween Photos
-        elif message.content.startswith('$dh') and (message.content.endswith('.jpg') or message.content.endswith('.jpeg') or message.content.endswith('.png')):
+        elif message.content.startswith('$dh'):
             image_url = message.content.split(' ')[1]
             filename = image_url.split('/')[-1]
             file_path = './static/Backgrounds/halloween/'
@@ -180,7 +180,7 @@ async def on_message(message):
                     logger.info(f'Saved {filename}')
 
         # Birthday Photos
-        elif message.content.startswith('$db') and (message.content.endswith('.jpg') or message.content.endswith('.jpeg') or message.content.endswith('.png')):
+        elif message.content.startswith('$db'):
             image_url = message.content.split(' ')[1]
             filename = image_url.split('/')[-1]
             file_path = './static/Backgrounds/birthday/'
